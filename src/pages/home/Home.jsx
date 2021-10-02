@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SearchBox, LocationBox } from '../../components/utils';
+import { SearchBox, LocationBox, WeatherBox } from '../../components/utils';
 import './Home.css';
 
 const HomePage = () => {
@@ -8,6 +8,7 @@ const HomePage = () => {
         <main>
             <SearchBox />
             <LocationBox />
+            <WeatherBox />
         </main>
     );
 };

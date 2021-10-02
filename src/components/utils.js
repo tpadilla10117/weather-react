@@ -9,3 +9,5 @@
     export { default as SearchBox } from '../components/SearchBox';
     
     export { default as LocationBox } from '../components/LocationBox';
+
+    export { default as WeatherBox} from '../components/WeatherBox';

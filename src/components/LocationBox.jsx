@@ -9,7 +9,6 @@ function LocationBox() {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         let day = days[d.getDay()];
-
         let date = d.getDate();
         let month = months[d.getMonth()]; //returns number between 0 - 11 
         let year = d.getFullYear();
