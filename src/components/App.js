@@ -9,10 +9,8 @@ const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
 
       <HomePage />
-
 
     </div>
   );
