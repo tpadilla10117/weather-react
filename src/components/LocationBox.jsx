@@ -1,7 +1,9 @@
 import React from "react";
 import './LocationBox.css';
 
-function LocationBox() {
+function LocationBox(props) {
+
+    const {query, setQuery, weather, setWeather, search, apiKey, BASE_URL} = props;
 
 /* Function to build the current date: */
     const dateBuilder = (d) => {
@@ -19,7 +21,7 @@ function LocationBox() {
     return (
         <div className="location-box">
             <div className="location">
-            New York City
+            {weather.name}, {weather.sys.country}
             </div>
             <div className="date">
                 {dateBuilder( new Date() )}

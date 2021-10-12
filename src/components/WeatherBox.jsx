@@ -1,14 +1,17 @@
 import React from 'react';
 import './WeatherBox.css';
 
-function WeatherBox () {
+function WeatherBox (props) {
+
+    const {query, setQuery, weather, setWeather, search, apiKey, BASE_URL} = props;
+
     return (
         <div className="weather-box">
             <div className="temp">
-                15 c
+                {Math.round(weather.main.temp)}°c
             </div>
             <div className="weather">
-                Sunny
+                {weather.weather[0].main}
             </div>
 
         </div>

@@ -10,8 +10,19 @@ const HomePage = (props) => {
     return (
         <main>
             <SearchBox query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
-            <LocationBox query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
-            <WeatherBox  query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
+
+            { (typeof weather.main != "undefined") ? (
+            
+                <LocationBox query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/> 
+
+            ) : ('') }
+
+            { (typeof weather.main != "undefined") ? (
+            
+                <WeatherBox  query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
+
+            ) : ('') }
+
         </main>
     );
 };
