@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './SearchBox.css';
 
-function SearchBox() {
+function SearchBox(props) {
+
+    const {query, setQuery, weather, setWeather, search, apiKey, BASE_URL} = props;
+
     return (
         <div className="search-box">
             
@@ -9,7 +12,9 @@ function SearchBox() {
                 type="text"
                 className="search-bar"
                 placeholder="Search..."
-        
+                onChange={event => setQuery(event.target.value)}
+                value={query}
+                onKeyPress={search}
             />
         </div>
     );

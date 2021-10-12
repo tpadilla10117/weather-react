@@ -9,9 +9,9 @@ const HomePage = (props) => {
 
     return (
         <main>
-            <SearchBox />
-            <LocationBox />
-            <WeatherBox />
+            <SearchBox query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
+            <LocationBox query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
+            <WeatherBox  query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search} apiKey={apiKey} BASE_URL={BASE_URL}/>
         </main>
     );
 };

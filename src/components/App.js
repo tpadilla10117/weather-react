@@ -1,9 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { HomePage} from './utils';
 
 require('dotenv').config();
 
+/* WEATHER_KEY=621cd91a39717c6150035bb17519e755 */
 const apiKey = process.env.WEATHER_KEY;
+
+console.log(process.env.apiKey);
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 function App() {
@@ -16,7 +19,11 @@ function App() {
     if(event.key === "Enter") {
       fetch(`${BASE_URL}weather?q=${query}&units=metric&APPID=${apiKey}`)
         .then(res => res.json() )
-        .then(result => setWeather(result) );
+        .then(result => {
+          setQuery('');
+          setWeather(result);
+          console.log("Here is the weather:", result);
+        } );
     }
   };
 
