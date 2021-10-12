@@ -3,10 +3,9 @@ import { HomePage} from './utils';
 
 require('dotenv').config();
 
-/* WEATHER_KEY=621cd91a39717c6150035bb17519e755 */
-const apiKey = process.env.WEATHER_KEY;
+const apiKey = process.env.REACT_APP_WEATHER_KEY;
 
-console.log(process.env.apiKey);
+/* console.log(process.env); */
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
 /* To dynamically render weather data: */
   const search = event => {
     if(event.key === "Enter") {
-      fetch(`${BASE_URL}weather?q=${query}&units=metric&APPID=${apiKey}`)
+      fetch(`${BASE_URL}/weather?q=${query}&units=metric&APPID=${apiKey}`)
         .then(res => res.json() )
         .then(result => {
           setQuery('');
