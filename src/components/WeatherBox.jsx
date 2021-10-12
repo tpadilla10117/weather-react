@@ -3,7 +3,7 @@ import './WeatherBox.css';
 
 function WeatherBox () {
     return (
-        <div className="weater-box">
+        <div className="weather-box">
             <div className="temp">
                 15 c
             </div>
