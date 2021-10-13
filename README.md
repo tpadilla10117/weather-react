@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# App Description
+
+- weather-react is a simple weather-tracking web-application in which users can query/search for the weather conditions in a given location around the world.
+
+## Usage Instructions & Limitations:
+
+- 1) In the searchbar, type in the name of a city who's conditions you wish to view.
+
+## Tech Stack:
+
+- Node.js, JS, React.js, HTML, CSS
+- OpenWeather API { https://openweathermap.org/api }
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -70,4 +83,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### `npm i dotenv`
+### `npm i dotenv` => To load environment variables from `.env` file to `process.env` object
+
+Reference: https://www.freecodecamp.org/news/how-to-use-node-environment-variables-with-a-dotenv-file-for-node-js-and-npm/
