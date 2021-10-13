@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import './SearchBox.css';
 
-
+/* This component contains the Searchbar in the UI: */
 function SearchBox(props) {
 
-    const {query, setQuery, weather, setWeather, search, apiKey, BASE_URL} = props;
+    const {query, setQuery,search} = props;
 
     return (
         <div className="search-box">

@@ -1,9 +1,10 @@
 import React from 'react';
 import './WeatherBox.css';
 
+/* This function contains the main temperature block in the UI:*/
 function WeatherBox (props) {
 
-    const {query, setQuery, weather, setWeather, search, apiKey, BASE_URL} = props;
+    const {weather} = props;
 
     return (
         <div className="weather-box">

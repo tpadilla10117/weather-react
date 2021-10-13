@@ -1,9 +1,10 @@
 import React from "react";
 import './LocationBox.css';
 
+/* This component renders the Location that will be queried in the SearchBox.jsx component: */
 function LocationBox(props) {
 
-    const {query, setQuery, weather, setWeather, search, apiKey, BASE_URL} = props;
+    const {weather} = props;
 
 /* Function to build the current date: */
     const dateBuilder = (d) => {
