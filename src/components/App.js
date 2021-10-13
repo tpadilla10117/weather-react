@@ -28,7 +28,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={ (typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'App warm' : 'App') : 'App' }>
 
       <HomePage query={query} setQuery={setQuery} weather={weather} setWeather={setWeather} search={search}
         apiKey={apiKey}
